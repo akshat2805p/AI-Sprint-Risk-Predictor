@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Emerald & White Theme */
+  --color-primary-50: #ecfdf5;
+  /* Emerald 50 */
+  --color-primary-100: #d1fae5;
+  /* Emerald 100 */
+  --color-primary-500: #10b981;
+  /* Emerald 500 */
+  --color-primary-600: #059669;
+  /* Emerald 600 */
+  --color-primary-700: #047857;
+  /* Emerald 700 */
+
+  --color-glass-white: rgba(255, 255, 255, 0.9);
+  --color-glass-border: rgba(226, 232, 240, 0.6);
+}
+
+:root {
+  background-color: #f8fafc;
+  /* Slate 50 - Very clean white/grey */
+  color: #1e293b;
+  /* Slate 800 */
+
+  /* Subtle Green Gradient Mesh */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar Clean */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.8);
+}
+
+/* Modern Card - No Glass, Just Clean */
+.glass-panel {
+  background: white;
+  border: 1px solid #f1f5f9;
+  /* Slate 100 */
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.02),
+    0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transform: translateY(-2px);
+  border-color: #e2e8f0;
+}
+
+/* Button & interactive states */
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
